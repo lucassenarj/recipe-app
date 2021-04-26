@@ -1,6 +1,6 @@
 import React from "react";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-import { SideBar } from "./../";
+import { NavItems } from "./../";
 
 function Drawer({ display, handle }) {
   return (
@@ -15,7 +15,7 @@ function Drawer({ display, handle }) {
         onClick={handle}
         onKeyDown={handle}
       >
-        <SideBar />
+        <NavItems />
       </div>
     </SwipeableDrawer>
   );

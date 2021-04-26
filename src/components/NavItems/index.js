@@ -6,7 +6,7 @@ import { ItemList } from "./../";
 import { menuItems } from "./../../utils/constants";
 import { Container, Icon } from "./styles";
 
-function SideBar() {
+function NavItems() {
   return (
     <Container>
       <Icon>
@@ -22,4 +22,4 @@ function SideBar() {
   );
 };
 
-export default SideBar;
+export default NavItems;
