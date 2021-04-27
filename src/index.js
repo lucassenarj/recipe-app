@@ -5,7 +5,7 @@ import { createBrowserHistory } from "history";
 import { HomePage, RecipesPage } from "./pages";
 
 ReactDOM.render(
-  <BrowserRouter history={createBrowserHistory()}>
+  <BrowserRouter history={createBrowserHistory()} basename="/recipe-app/">
     <Switch>
       <Route path="/" component={HomePage} exact={true} />
       <Route path="/recipes" component={RecipesPage} />
