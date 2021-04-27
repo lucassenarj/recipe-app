@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import List from "@material-ui/core/List";
 import Chip from "@material-ui/core/Chip";
+import List from "@material-ui/core/List";
 
 export const Container = styled.div`
   display: flex;

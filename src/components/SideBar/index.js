@@ -2,8 +2,9 @@ import React from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import { Recipe, Recipes } from "./styles";
+import categories from "./../../utils/categories";
 
-function SideBar({ categories }) {
+function SideBar() {
   return (
     <React.Fragment>
       <Typography variant="h3">
@@ -11,7 +12,7 @@ function SideBar({ categories }) {
       </Typography>
       <Recipes>
         {
-          categories.length >= 1 && categories.map((category) => (
+          categories.map((category) => (
             <Recipe
               avatar={<Avatar alt={category.strCategory} src={category.strCategoryThumb} />}
               label={category.strCategory}
