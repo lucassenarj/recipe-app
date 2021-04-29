@@ -16,6 +16,7 @@ import Skeleton from "@material-ui/lab/Skeleton";
 import Typography from "@material-ui/core/Typography";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import categories from "./../../utils/categories";
+import { generateSlug } from "./../../utils/helpers";
 import { ButtonRight, Icons } from "./styles";
 import { useHistory } from "react-router-dom";
 
@@ -46,7 +47,8 @@ function MainRecipe({ loading, recipe }) {
   }
 
   const details = () => {
-    history.push("/recipes");
+    const slug = generateSlug(recipe.strMeal);
+    history.push(`/recipe/${slug}`, recipe);
   }
 
   return (
@@ -104,6 +106,7 @@ function MainRecipe({ loading, recipe }) {
               variant="contained"
               color="primary"
               startIcon={<InfoIcon />}
+              onClick={() => details()}
             >
               Full recipe
             </ButtonRight>

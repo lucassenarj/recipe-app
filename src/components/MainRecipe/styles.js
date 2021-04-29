@@ -7,6 +7,9 @@ export const ButtonRight = styled(Button)`
 
 export const Icons = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-flow: row wrap;
+
+  div {
+    margin: 10px;
+  }
 `;
