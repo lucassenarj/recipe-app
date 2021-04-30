@@ -35,17 +35,6 @@ function MainRecipe({ loading, recipe }) {
     return count;
   }
 
-  const steps = () => {
-    let count = 0;
-    let i = 1;
-    for (i; i < 20; i++) {
-      if (recipe[`strMeasure${i}`].length !== 0) {
-        count++;
-      }
-    }
-    return count;
-  }
-
   const details = () => {
     const slug = generateSlug(recipe.strMeal);
     history.push(`/recipe/${slug}`, recipe);
@@ -83,10 +72,6 @@ function MainRecipe({ loading, recipe }) {
                 <Chip
                   avatar={<LocalCafeIcon />}
                   label={`${qtdIngredients()} ingredients`}
-                />
-                <Chip
-                  avatar={<ReceiptIcon />}
-                  label={`${steps()} steps`}
                 />
                 <Chip
                   avatar={<YouTubeIcon />}
