@@ -11,7 +11,6 @@ function Details({ history: { location : { state: recipe }} }) {
   console.log(recipe);
 
   const getIngredients = () => {
-    let count = 0;
     let i = 1;
     let ingredients = [];
     for (i; i < 20; i++) {
@@ -20,7 +19,6 @@ function Details({ history: { location : { state: recipe }} }) {
           item: recipe[`strIngredient${i}`],
           measure: recipe[`strMeasure${i}`],
         });
-        count++;
       }
     }
     return ingredients;
