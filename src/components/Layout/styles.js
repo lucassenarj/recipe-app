@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Toolbar from "@material-ui/core/Toolbar";
+import { NavLink } from "react-router-dom";
 import IconButton from "@material-ui/core/IconButton";
 import MenuList from "@material-ui/core/MenuList";
-import { NavLink } from "react-router-dom";
+import Toolbar from "@material-ui/core/Toolbar";
 
 export const Base = styled.div`
   flex-grow: 1;
