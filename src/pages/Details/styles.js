@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Card from "@material-ui/core/Card";
+import CardMedia from "@material-ui/core/CardMedia";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
@@ -14,4 +15,17 @@ export const Thumbnail = styled(Card)`
 
 export const Text = styled(Typography)`
   margin: 10px auto !important;
+`;
+
+export const Video = styled(CardMedia)`
+  ${({ theme }) => `
+    height: 200px;
+    ${theme.breakpoints.up("sm")} {
+      height: 450px;
+    }
+  `}
+`;
+
+export const VideoCard = styled(Card)`
+  margin: 20px auto;
 `;
