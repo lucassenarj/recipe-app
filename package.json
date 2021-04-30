@@ -26,7 +26,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "commit": "cz"
+    "commit": "cz",
+    "release": "semantic-release --no-ci"
   },
   "eslintConfig": {
     "extends": [
@@ -47,9 +48,12 @@
     ]
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "3.3.0",
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "semantic-release": "^17.4.2"
   },
   "config": {
     "commitizen": {
