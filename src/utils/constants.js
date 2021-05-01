@@ -5,8 +5,13 @@ export const menuItems = [
     icon: "home",
   },
   {
-    title: "Recipes",
-    path: "/recipes",
-    icon: "question_answer",
+    title: "Favorites",
+    path: "/favorites",
+    icon: "favorite"
+  },
+  {
+    title: "About",
+    path: "/about",
+    icon: "info",
   },
 ];
