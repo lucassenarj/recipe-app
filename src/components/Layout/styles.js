@@ -4,10 +4,6 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuList from "@material-ui/core/MenuList";
 import Toolbar from "@material-ui/core/Toolbar";
 
-export const Base = styled.div`
-  flex-grow: 1;
-`
-
 export const NavBar = styled(Toolbar)`
   ${({ theme }) => `
     justify-content: space-between;
