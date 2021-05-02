@@ -1,10 +1,13 @@
 import React from "react";
-import { Layout } from "./../../components";
+import { Layout, RecipeList } from "./../../components";
+import { Content } from "./styles";
 
 function Favorites(){
   return (
     <Layout title="Favorite page">
-      <h1>Favorites</h1>
+      <Content>
+        <RecipeList />
+      </Content>
     </Layout>
   );
 };

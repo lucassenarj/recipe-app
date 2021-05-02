@@ -75,8 +75,8 @@ function Details({ history: { location : { state: recipe }} }) {
                 </Typography>
                 <ul>
                   {
-                    ingredients.map((ingredient) => (
-                      <li>{ ingredient.item} - { ingredient.measure }</li>
+                    ingredients.map((ingredient, index) => (
+                      <li key={index}>{ ingredient.item} - { ingredient.measure }</li>
                     ))
                   }
                 </ul>
