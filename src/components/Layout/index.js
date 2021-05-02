@@ -12,6 +12,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Typography from "@material-ui/core/Typography";
 import FavoritesContext from "./../../store/context/favorites";
 import favoritesReducer from "./../../store/reducers/favorites";
+import { Helmet } from "react-helmet";
 import { favoritesSetList } from "./../../store/actions/favorites";
 import { menuItems } from "./../../utils/constants";
 
@@ -37,6 +38,9 @@ function Layout({ children, title }) {
     <MuiThemeProvider theme={theme}>
       <ThemeProvider theme={theme}>
         <FavoritesContext.Provider value={{ favorites, dispatch }}>
+          <Helmet>
+            <title>{ title } | Recipe App</title>
+          </Helmet>
           <CssBaseline />
           <AppBar position="static">
             <Container maxWidth="lg">
