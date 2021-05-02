@@ -8,4 +8,5 @@ export const Container = styled.div`
 export const Icon = styled(List)`
   display: flex;
   justify-content: center;
+  margin: 30px auto;
 `;
