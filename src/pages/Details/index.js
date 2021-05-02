@@ -8,6 +8,7 @@ import { Layout } from "./../../components";
 import { Content, Text, Thumbnail, Video, VideoCard } from "./styles";
 
 function Details({ history: { location : { state: recipe }} }) {
+  console.log(recipe);
   const getIngredients = () => {
     let i = 1;
     let ingredients = [];

@@ -3,7 +3,7 @@ import {
   Layout,
   MainRecipe,
   SideBar,
-  SmallRecipe,
+  Recipe,
 } from "./../../components";
 import { Content } from "./styles";
 import Grid from "@material-ui/core/Grid";
@@ -37,17 +37,23 @@ function Home() {
   return (
     <Layout title="Home Page">
       <Content>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={12} md={3}>
-            <SideBar loading={loading} />
-          </Grid>
-          <Grid item xs={12} sm={12} md={6}>
-            <MainRecipe loading={loading} recipe={main} />
-          </Grid>
-          <Grid item xs={12} sm={12} md={3}>
-            <SmallRecipe loading={loading} recipes={smalls} />
-          </Grid>
-        </Grid>
+        {
+          !loading && (
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={12} md={3}>
+                <SideBar loading={loading} />
+              </Grid>
+              <Grid item xs={12} sm={12} md={6}>
+                <MainRecipe loading={loading} recipe={main} />
+              </Grid>
+              <Grid item xs={12} sm={12} md={3}>
+                {
+                  smalls.map((recipe, index) => (<Recipe item={recipe} key={index} />))
+                }
+              </Grid>
+            </Grid>
+          )
+        }
       </Content>
     </Layout>
   );

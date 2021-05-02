@@ -72,7 +72,7 @@ function MainRecipe({ loading, recipe }) {
             <CardMedia
               image={recipe.strMealThumb}
               title={recipe.strMeal}
-              style={{ height: "300px" }}
+              style={{ height: "360px" }}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
@@ -101,10 +101,8 @@ function MainRecipe({ loading, recipe }) {
             <IconButton aria-label="share">
               <ShareIcon />
             </IconButton>
-            <ButtonRight 
-              variant="contained"
-              color="primary"
-              startIcon={<InfoIcon />}
+            <ButtonRight
+              startIcon={<InfoIcon color="action" />}
               onClick={() => details()}
             >
               Full recipe
